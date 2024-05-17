@@ -1,0 +1,19 @@
+guild: 
+	- user_joinGuild : Send Tin nhắn vào guild/channel. Chào mừng và yêu cầu cập nhật mssv thì set lại role là member
+	- 
+
+Cho phép sinh viên tạo phognf họp riêng 
+
+mỗi ngày /daily ( hoặc gì đó) để nhận tiền vào tài khoản tài khoản dùng để làm gì đó ( tiền dùng để làm gì đó chưa biết nữa)
+
+giải bài, tương tác -> tăng exp -> tăng level ( how to calc exp ) 
+
+(sử dụng cái gửi vào kênh mỗi ngày) làm combat ( tổng các user giải 1 bài duy nhất ) mỗi tuần ( hoặc ngày ) nhận thưởng -> ( như 1 cái game có thể gọi đây là 1 ngày 1 giờ lập trình cho giải bài này trong 1 tiếng nếu làm theo ngày ) 
+
+thêm thời hạn đky tham gia contest ( nếu quá hạn đky thì k cho react bài nữa )
+
+
+
+
+
+ 
