@@ -33,9 +33,7 @@ module.exports = {
     const { interaction } = params;
     await interaction.deferReply();
     const student_id = interaction.options.getString("type_id");
-    function solve() {
-      return /^${student_id}@.*/;
-    }
+
     const student = await User.findOne({ email: `${student_id}@student.tdmu.edu.vn` });
     if (!student) {
       await interaction.editReply(languageVi.verify.reject);
@@ -48,7 +46,7 @@ module.exports = {
 
     if (checkExitUserDiscord) {
       if (checkExitUserDiscord.userId === user.id) {
-        await interaction.editReply("Bạn đã xác minh tài khoản trước đó !!!");
+        await interaction.editReply("Bạn đã xác minh tài khoản trước đó !!! Nếu có sự nhầm lẫn vui lòng liên hệ với ***ADMIN***");
       } else {
         await interaction.editReply(
           "Mã số sinh viên đã được xác minh bởi người khác !!!"
@@ -56,7 +54,12 @@ module.exports = {
       }
       return;
     }
-
+    
+    const mainUser = await UserDiscord.findOne({ userId: user.id });
+    if (mainUser && mainUser.student_id) {
+      await interaction.editReply("Bạn đã xác minh tài khoản trước đó !!! Nếu có sự nhầm lẫn vui lòng liên hệ với ***ADMIN***");
+      return;
+    }
     const verifyUserDiscord = await UserDiscord.findOneAndUpdate(
       { userId: user.id },
       { student_id: student_id }
